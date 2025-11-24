@@ -1,0 +1,34 @@
+<div class="container">
+ 
+    <div class="card">
+  <h5 class="card-header">Name: {{ student.fname }} {{ student.lname }}</h5>
+  <div class="card-body">
+     <h1 class=" text-center ">{{ grade.emoji }}</h1>
+    
+    <h5 class="card-title">Maths: {{ subjects.maths }}</h5>
+    <h5 class="card-title">Physics: {{ subjects.physics }}</h5>
+    <h5 class="card-title">Chemistry: {{ subjects.chemistry }}</h5>
+    <h5 class="card-title">English: {{ subjects.english }}</h5>
+    {% if student.language == 'hindi' %}
+    <h5 class="card-title">Hindi: {{ subjects.hindi }}</h5>
+     {% elif student.language == 'bengali' %}
+    <h5 class="card-title">Bengali: {{ subjects.bengali }}</h5>
+     {% endif %}
+    <h5 class="card-title">Assessment: {{ subjects.assessment }}</h5>
+
+    <h5 class="card-title">Total Score: {{ subjects.total_marks }}</h5>
+    <h5 class="card-title">Percentage: {{ subjects.percentage }}%</h5>
+
+    <h5 class="card-title">Grade: {{ grade.grade }}</h5>
+
+    
+
+        <h5 class="card-title">Remark: {{ grade.remark }}</h5>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+ 
+  </div>
+</div>
+</div>
+
+ 

@@ -1,0 +1,40 @@
+{% for sub in subjects %}
+       
+        <tr>
+            <td>{{ sub.student.fname }} {{ sub.student.lname }}</td>
+            <td>{{ sub.maths }}</td>
+            <td>{{ sub.physics }}</td>
+            <td>{{ sub.chemistry }}</td>
+            <td>{{ sub.english }}</td>
+            <td>{{ sub.hindi }}</td>
+            <td>{{ sub.bengali }}</td>
+            <td>{{ sub.assessment }}</td>
+            <td>{{ sub.total_marks }}</td>
+            <td>{{ sub.percentage }}</td>
+            <td>
+                <button type="button" title="Edit" id="edit-subjects" class="btn btn-warning btn-sm edit-subjects" 
+                data-id="{{ sub.id }}" 
+                data-maths="{{ sub.maths }}"
+                data-physics="{{ sub.physics }}"
+                data-chemistry="{{ sub.chemistry }}"
+                data-english="{{sub.english }}"
+                data-hindi="{{ sub.hindi }}"
+                data-bengali="{{ sub.bengali }}"
+                data-percentage="{{ sub.percentage }}"
+                data-total_marks="{{ sub.total_marks }}"
+                data-assessment-id="{{ sub.assessment.id }}"
+                data-student-id="{{ sub.student.id }}"
+               
+                >Edit</button>
+            </td>
+            <td>
+                <button type="button"  title="Delete" id="del-subjects" class="btn btn-danger btn-sm del-subjects" data-id="{{ sub.id }}">Delete</button>
+            </td>
+
+        </tr>
+       
+     
+{% empty %}
+<td colspan="3" class="text-center">No data available.</td>
+{% endfor %}  
+

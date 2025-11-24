@@ -1,0 +1,32 @@
+{% for student in students %}
+<tr>
+    <td>{{ student.fname }}</td>
+    <td>{{ student.lname }}</td>
+    <td>{{ student.email }}</td>
+    <td>{{ student.gender }}</td>
+    <td>{{ student.city }}</td>
+    <td>{{ student.language }}</td>
+    <td>{{ student.contact }}</td>
+    <td>
+        <button type="button" title="Edit" id="edit-student" class="btn btn-warning btn-sm edit-student" 
+        data-id="{{ student.id }}" 
+        data-fname="{{ student.fname }}"
+        data-lname="{{ student.lname }}"
+        data-email="{{ student.email }}"
+        data-gender="{{ student.gender }}"
+        data-city="{{ student.city }}"
+        data-language="{{ student.language }}"
+        data-contact="{{ student.contact }}"
+         >Edit</button>
+    </td>
+    <td>
+        <button type="button"  title="Delete" id="del-student" class="btn btn-danger btn-sm del-student" data-id="{{ student.id }}">Delete</button>
+    </td>
+
+</tr>
+{% empty %}
+<td colspan="3" class="text-center">No data available.</td>
+{% endfor %}  
+
+
+

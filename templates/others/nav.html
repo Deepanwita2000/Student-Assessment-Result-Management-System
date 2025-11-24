@@ -1,0 +1,31 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h2>🏫</h2></a>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'read_student' %}">Students data</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'view_marks' %}">Add marks</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'view_student_records' %}">Grades</a>
+        </li>
+      </ul>
+      <!-- <form class="d-flex" role="search" method="post">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Type First name" aria-label="Search" id="search_fname" name="search_fname">
+        <button class="btn btn-outline-success" type="submit">Score Card</button>
+      </form> -->
+    </div>
+  </div>
+ </nav>
+</div>
